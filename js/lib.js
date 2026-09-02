@@ -187,6 +187,10 @@ export function disposeScenes() { while (_scenes.length) _scenes.pop().dispose()
 
 /* Wykres Plotly z ciemnym motywem */
 export function plot(node, data, layout = {}, config = {}) {
+  if (!window.Plotly) {
+    node.innerHTML = '<div style="padding:24px;color:#6b7796;text-align:center">Ładowanie biblioteki wykresów…<br><small>Odśwież stronę, jeśli to nie zniknie.</small></div>';
+    return;
+  }
   const base = {
     paper_bgcolor: 'rgba(0,0,0,0)',
     plot_bgcolor: 'rgba(0,0,0,0)',
