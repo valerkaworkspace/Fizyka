@@ -30,15 +30,28 @@ scenę/odczyty/wykresy przy zmianie suwaka.
 - [x] Fundament: layout, motyw, router, nawigacja, wyszukiwarka, strona główna
 - [x] Kinematyka → Rzut ukośny (3D + wykresy tor/prędkość + presety g Ziemia/Księżyc/Mars)
 - [x] Dynamika → Równia pochyła (siły 3D, tarcie, a(β), wykres sił)
-- [x] Auto-deploy GitHub Pages (`.github/workflows/deploy.yml`)
+- [x] Gazy i termodynamika → Model gazu 3D (teoria kinetyczna: małe cząsteczki,
+      zderzenia sprężyste ściany + cząstka-cząstka, kolor=prędkość, ciśnienie z pędu,
+      rozkład Maxwella-Boltzmanna wyłaniający się z termalizacji, sprawdzenie pV=NkT)
+- [x] Auto-deploy GitHub Pages (`.github/workflows/deploy.yml`, enablement:true)
 - [ ] Drgania → Wahadło matematyczne (placeholder „wkrótce")
 - [ ] Grawitacja → Ruch orbitalny (placeholder „wkrótce")
 
 ## Do zrobienia / pomysły na później
+- Tematy z artifactu „Pracownia" do przeniesienia (w naszej, dokładniejszej wersji):
+  Kinematyka x/v/a, Siła wypadkowa i przyspieszenie, Ciśnienie w cieczy,
+  Wypór i siła Archimedesa (+ woda i zanurzone ciało 3D), Przekształcenia paraboli,
+  wzory Viète'a. Uwaga użytkowniczki: wizualizacje mają być DOKŁADNE i realistyczne,
+  nie „tanie ilustracje" (małe cząsteczki, prawdziwa fizyka) — patrz model gazu jako wzorzec.
 - Dokończyć wahadło i orbity (Keplera).
-- Kolejne tematy: rzut pionowy/poziomy, ruch jednostajny po okręgu, pęd i zderzenia,
-  energia (praca, moc), pole elektryczne, obwody.
 - Ewentualnie tryb jasny/ciemny, eksport wykresów, quizy sprawdzające.
+
+## Ważne uwagi z sesji
+- Biblioteki z CDN: Three.js + Plotly z **jsdelivr** (cdnjs dla Plotly nie zadziałał
+  w przeglądarce → błąd „reading 'react'"). KaTeX z cdnjs.
+- Repo jest PUBLICZNE (wymagane dla darmowego GitHub Pages i dla `git clone` w Termux).
+- Użytkowniczka pracuje na tablecie z Androidem; uruchamia lokalnie w Termux
+  (`python -m http.server 8000`) albo docelowo przez GitHub Pages.
 
 ## Uwagi techniczne
 - GitHub Pages musi być włączony w ustawieniach repo (Source: GitHub Actions),

@@ -22,6 +22,15 @@ export const CATEGORIES = [
     ],
   },
   {
+    id: 'termodynamika',
+    title: 'Gazy i termodynamika',
+    icon: '🌡️',
+    desc: 'Teoria kinetyczna, ciśnienie, temperatura, prawo gazowe.',
+    topics: [
+      { id: 'model-gazu', title: 'Model gazu 3D (teoria kinetyczna)', icon: '💨', load: () => import('./topics/model-gazu.js') },
+    ],
+  },
+  {
     id: 'drgania',
     title: 'Drgania i fale',
     icon: '🌊',
